@@ -3,112 +3,322 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galaxies</title>
-</head>
+
+    <title>Galaxies - Explore the Universe</title>
+
     <style>
-         *{
-            margin: 0px
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .header{
-            background-color:navy ;
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: whitesmoke;
+        }
+
+        /* HEADER */
+        .header {
+            background-color: navy;
             color: white;
             text-align: center;
-            padding: 100px;
+            padding: 70px 20px;
         }
-        .header h1,p,a{
-            margin: 10px;
+
+        .header h1 {
+            margin-bottom: 20px;
+            font-size: 40px;
         }
-        .header a{
+
+        .header p {
+            max-width: 800px;
+            margin: 0 auto 25px;
+            font-size: 18px;
+        }
+
+        .learn-more {
+            display: inline-block;
             background-color: white;
-            padding: 7px;
-            border-radius:10px ;
+            color: navy;
+            padding: 10px 18px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 30px;
         }
-        .main{
+
+        .learn-more:hover {
+            background-color: lightgray;
+        }
+
+        /* NAVIGATION */
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            display: inline-block;
+            background-color: white;
+            color: navy;
+            text-decoration: none;
+            padding: 8px 14px;
+            margin: 5px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: lightgray;
+        }
+
+        /* MAIN CONTENT */
+        .main {
             background-color: whitesmoke;
             color: black;
-            padding: 20px;
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
         }
-        .main a{
-            background-color: navy;
-            padding: 7px;
+
+        .main h2 {
+            color: navy;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        .main p {
+            margin-bottom: 20px;
+            font-size: 17px;
+        }
+
+        .main ul {
+            padding-left: 25px;
+            margin-bottom: 25px;
+        }
+
+        .main li {
+            margin-bottom: 15px;
+        }
+
+        /* GALAXY IMAGE */
+        .galaxy-image {
+            display: block;
+            width: 100%;
+            max-width: 550px;
+            height: auto;
+            margin: 30px auto;
             border-radius: 10px;
-            color: white;
         }
-        .footer{
+
+        /* BUTTON */
+        .main-button {
+            display: inline-block;
+            background-color: navy;
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .main-button:hover {
+            background-color: #000066;
+        }
+
+        /* FOOTER */
+        .footer {
             background-color: black;
             color: white;
-            padding: 100px;
+            padding: 50px 20px;
             text-align: center;
         }
+
+        .footer p {
+            margin: 10px;
+        }
+
+        /* PHONE */
+        @media (max-width: 600px) {
+
+            .header {
+                padding: 50px 15px;
+            }
+
+            .header h1 {
+                font-size: 28px;
+            }
+
+            .header p {
+                font-size: 16px;
+            }
+
+            nav a {
+                display: block;
+                width: 90%;
+                max-width: 300px;
+                margin: 8px auto;
+            }
+
+            .main {
+                padding: 30px 18px;
+            }
+
+            .main h2 {
+                font-size: 23px;
+            }
+
+            .main p,
+            .main li {
+                font-size: 16px;
+            }
+
+            .galaxy-image {
+                width: 100%;
+                height: auto;
+            }
+
+            .footer {
+                padding: 40px 15px;
+                font-size: 14px;
+            }
+        }
     </style>
+</head>
+
 <body>
+
+    <!-- HEADER -->
     <div class="header">
+
         <hr>
-        <h1><b>Welcome to Explore the Universe</b></h1>
-         <p>
-            Discover galaxies, stars, planets, black holes, and the mysteries of the cosmos. Journey through space and time and learn how the universe works.
-         </p>
-        <br>
-        <a href="https://www.google.com/search?q=about+the+universe&oq=about+the+universe&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIICAQQABgWGB4yCAgFEAAYFhgeMggIBhAAGBYYHjIICAcQABgWGB4yCAgIEAAYFhgeMggICRAAGBYYHtIBCjE1MjI0ajBqMTWoAgiwAgHxBfETqlH6GXCj&sourceid=chrome&ie=UTF-8" target="_blank">
-            learn more
-        </a><br><br><br>
-        <header>
+
+        <h1>Welcome to Explore the Universe</h1>
+
+        <p>
+            Discover galaxies, stars, planets, black holes, and the mysteries
+            of the cosmos. Journey through space and time and learn how the
+            universe works.
+        </p>
+
+        <a
+            class="learn-more"
+            href="https://www.google.com/search?q=about+the+universe"
+            target="_blank"
+        >
+            Learn More
+        </a>
+
+        <!-- NAVIGATION -->
         <nav>
-            <a href="index.html">home</a>
+            <a href="index.html">Home</a>
             <a href="Galaxies.html">Galaxies</a>
             <a href="Sun.html">Sun</a>
             <a href="Stars.html">Stars</a>
             <a href="Planets.html">Planets</a>
+            <a href="contact.html">Contact Us</a>
         </nav>
-    </header><br><br>
-    <hr>
+
+        <br>
+
+        <hr>
+
     </div>
+
+
+    <!-- MAIN CONTENT -->
     <div class="main">
-        <h2>
-            Galaxies
-        </h2>
+
+        <h2>Galaxies</h2>
+
         <p>
-            A galaxy is a massive system of stars, gas, dust, and dark matter held together by gravity. Galaxies come in different shapes, such as spirals, ovals (ellipticals), or irregular blobs. Our home galaxy is called the Milky Way. It is just one of hundreds of billions of galaxies in the universe.
+            A galaxy is a massive system of stars, gas, dust, and dark matter
+            held together by gravity. Galaxies come in different shapes, such
+            as spirals, ovals (ellipticals), or irregular blobs. Our home
+            galaxy is called the Milky Way. It is just one of hundreds of
+            billions of galaxies in the universe.
         </p>
-        <h2>
-            Types of Galaxies
-        </h2>
+
+
+        <h2>Types of Galaxies</h2>
+
         <ul>
+
             <li>
-                Spiral Galaxies: These look like spinning pinwheels. They have a bright center and flat, curved arms. The Milky Way is a spiral galaxy.
-            </li><br>
+                <strong>Spiral Galaxies:</strong>
+                These look like spinning pinwheels. They have a bright center
+                and flat, curved arms. The Milky Way is a spiral galaxy.
+            </li>
+
             <li>
-                Elliptical Galaxies: These are shaped like giant, bright ovals or eggs. They do not have arms and are mostly made of older stars.
-            </li><br>
+                <strong>Elliptical Galaxies:</strong>
+                These are shaped like giant, bright ovals or eggs. They do not
+                have arms and are mostly made of older stars.
+            </li>
+
             <li>
-                Irregular Galaxies: These do not have a neat shape. They often look like messy star piles. They are usually formed when two galaxies crash into each other.
-            </li><br>
+                <strong>Irregular Galaxies:</strong>
+                These do not have a neat shape. They often look like messy star
+                piles. They can form through interactions and collisions
+                between galaxies.
+            </li>
+
         </ul>
-        <h2>
-            Scale and Distance
-        </h2>
+
+
+        <h2>Scale and Distance</h2>
+
         <p>
-            Galaxies are huge! The Milky Way is about 100,000 light-years across. This means a beam of light would take 100,000 years to travel from one side to the other. Galaxies also have black holes in the center.
+            Galaxies are huge! The Milky Way is about 100,000 light-years
+            across. This means a beam of light would take about 100,000 years
+            to travel from one side to the other. Galaxies can also have
+            supermassive black holes at their centers.
         </p>
-        <img src="aron-visuals-GdP2aN8GS7k-unsplash.jpg" alt="the size of our galaxy"
-        width="550px"
-        height="500px"><br><br>
-        <a href="https://www.google.com/search?q=galaxy&sca_esv=2ec4f8cad967503a&sxsrf=APpeQntp1D-swgx0C3xx25E26K92VAxlCw%3A1783964454397&ei=JiNVatPdF6GqhbIPtNyT8QM&biw=1280&bih=593&ved=0ahUKEwjTiOK8mdCVAxUhVUEAHTTuJD4Q4dUDCBA&uact=5&oq=galaxy&gs_lp=Egxnd3Mtd2l6LXNlcnAiBmdhbGF4eTIWEAAYgAQYigUYQxjnBhjqAhi0AtgBAjIWEAAYgAQYigUYQxjnBhjqAhi0AtgBAjIWEAAYgAQYigUYQxjnBhjqAhi0AtgBAjIWEAAYgAQYigUYQxjnBhjqAhi0AtgBAjIWEAAYgAQYigUYQxjnBhjqAhi0AtgBAjIWEAAYgAQYigUYQxjnBhjqAhi0AtgBAjIWEAAYgAQYigUYQxjnBhjqAhi0AtgBAjIWEAAYgAQYigUYQxjnBhjqAhi0AtgBAjIWEAAYgAQYigUYQxjnBhjqAhi0AtgBAjIWEC4YgAQYigUYQxjnBhjqAhi0AtgBAjIQEAAYAxiPARjqAhi0AtgBATIQEAAYAxiPARjqAhi0AtgBATIQEAAYAxiPARjqAhi0AtgBATIQEAAYAxiPARjqAhi0AtgBATIQEAAYAxiPARjqAhi0AtgBATIQEAAYAxiPARjqAhi0AtgBATIQEAAYAxiPARjqAhi0AtgBATIQEAAYAxiPARjqAhi0AtgBATIQEAAYAxiPARjqAhi0AtgBATIQEAAYAxiPARjqAhi0AtgBAUj3LVCxA1jGJ3ACeAGQAQCYAQCgAQCqAQC4AQPIAQD4AQGYAgKgAmCoAhTCAgoQABhHGNYEGLADwgINEAAYgAQYigUYQxiwA8ICDhAAGOQCGNYEGLAD2AEBwgIXEC4Y3AYYuAYY2gYY2AIYyAMYsAPYAQHCAhcQLhjYAhi4BhjaBhjcBhjIAxiwA9gBAZgDIvEFuXSNAIRQhgOIBgGQBhO6BgYIARABGAm6BgQIAhgHkgcBMqAHALIHALgHAMIHBTQtMS4xyAdNgAgB&sclient=gws-wiz-serp"
-        target="_blank">
-        click to learn more
+
+
+        <!-- GALAXY IMAGE -->
+        <img
+            src="aron-visuals-GdP2aN8GS7k-unsplash.jpg"
+            alt="A galaxy in space"
+            class="galaxy-image"
+        >
+
+
+        <br>
+
+        <!-- LEARN MORE BUTTON -->
+        <a
+            class="main-button"
+            href="https://www.google.com/search?q=galaxy"
+            target="_blank"
+        >
+            Click to Learn More
         </a>
+
     </div>
-    <div class="footer"><hr>
-         <p>
+
+
+    <!-- FOOTER -->
+    <div class="footer">
+
+        <hr>
+
+        <p>
             Designed by Nwankwo Chiziterem
         </p>
+
         <p>
-            Phone Number : 09072558658
+            Phone Number: 09072558658
         </p>
-        <P>
-            E-mail address : nwankwochiziterem2012@gmail.com
-        </P>
+
+        <p>
+            E-mail Address: nwankwochiziterem2012@gmail.com
+        </p>
+
         <hr>
+
     </div>
+
 </body>
 </html>
