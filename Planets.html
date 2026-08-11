@@ -1,143 +1,390 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planets</title>
+
+    <title>Planets - Explore the Universe</title>
+
     <style>
-        *{
-            margin: 0px
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .header{
-            background-color:navy ;
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: whitesmoke;
+        }
+
+        /* HEADER */
+        .header {
+            background-color: navy;
             color: white;
             text-align: center;
-            padding: 100px;
+            padding: 70px 20px;
         }
-        .header h1,p,a{
-            margin: 10px;
+
+        .header h1 {
+            margin-bottom: 20px;
+            font-size: 40px;
         }
-        .header a{
+
+        .header p {
+            max-width: 800px;
+            margin: 0 auto 25px;
+            font-size: 18px;
+        }
+
+        /* LEARN MORE BUTTON */
+        .learn-more {
+            display: inline-block;
             background-color: white;
-            padding: 7px;
-            border-radius:10px ;
+            color: navy;
+            padding: 10px 18px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 30px;
         }
-        .main{
+
+        .learn-more:hover {
+            background-color: lightgray;
+        }
+
+        /* NAVIGATION */
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            display: inline-block;
+            background-color: white;
+            color: navy;
+            text-decoration: none;
+            padding: 8px 14px;
+            margin: 5px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: lightgray;
+        }
+
+        /* MAIN CONTENT */
+        .main {
             background-color: whitesmoke;
             color: black;
-            padding: 20px;
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
         }
-        .main a{
-            background-color: navy;
-            padding: 7px;
+
+        .main h2 {
+            color: navy;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        .main p {
+            margin-bottom: 20px;
+            font-size: 17px;
+        }
+
+        .main ul {
+            padding-left: 25px;
+            margin-bottom: 25px;
+        }
+
+        .main li {
+            margin-bottom: 15px;
+        }
+
+        /* PLANETS IMAGE */
+        .planets-image {
+            display: block;
+            width: 100%;
+            max-width: 550px;
+            height: auto;
+            margin: 30px auto;
             border-radius: 10px;
-            color: white;
         }
-        .footer{
+
+        /* MAIN BUTTON */
+        .main-button {
+            display: inline-block;
+            background-color: navy;
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .main-button:hover {
+            background-color: #000066;
+        }
+
+        /* FOOTER */
+        .footer {
             background-color: black;
             color: white;
-            padding: 100px;
+            padding: 50px 20px;
             text-align: center;
         }
+
+        .footer p {
+            margin: 10px;
+        }
+
+        /* PHONE RESPONSIVE DESIGN */
+        @media (max-width: 600px) {
+
+            .header {
+                padding: 50px 15px;
+            }
+
+            .header h1 {
+                font-size: 28px;
+            }
+
+            .header p {
+                font-size: 16px;
+            }
+
+            nav a {
+                display: block;
+                width: 90%;
+                max-width: 300px;
+                margin: 8px auto;
+            }
+
+            .main {
+                padding: 30px 18px;
+            }
+
+            .main h2 {
+                font-size: 23px;
+            }
+
+            .main p,
+            .main li {
+                font-size: 16px;
+            }
+
+            .planets-image {
+                width: 100%;
+                height: auto;
+            }
+
+            .footer {
+                padding: 40px 15px;
+                font-size: 14px;
+            }
+        }
+
     </style>
 </head>
+
+
 <body>
+
+    <!-- HEADER -->
     <div class="header">
-         <hr>
-        <h1><b>Welcome to Explore the Universe</b></h1>
-         <p>
-            Discover galaxies, stars, planets, black holes, and the mysteries of the cosmos. Journey through space and time and learn how the universe works.
-         </p>
-        <br>
-        <a href="https://www.google.com/search?q=about+the+universe&oq=about+the+universe&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIICAQQABgWGB4yCAgFEAAYFhgeMggIBhAAGBYYHjIICAcQABgWGB4yCAgIEAAYFhgeMggICRAAGBYYHtIBCjE1MjI0ajBqMTWoAgiwAgHxBfETqlH6GXCj&sourceid=chrome&ie=UTF-8" target="_blank">
-            learn more
-        </a><br><br><br>
-        <header>
-        <nav>
-            <a href="index.html">home</a>
-            <a href="Galaxies.html">Galaxies</a>
-            <a href="Sun.html">Sun</a>
-            <a href="Stars.html">Stars</a>
-            <a href="Planets.html">Planets</a>
-        </nav>
-    </header><br><br>
-    <hr>
-    </div>
-    <div class="main">
-        <h2>
-            The planets
-        </h2>
-        <p>
-            Our solar system consists of eight planets orbiting the Sun, categorized into two main groups based on their composition. The four inner terrestrial planets are made of rock and metal, while the four outer giant planets are massive spheres primarily made of gas or ice.
-        </p>
-        <h2>
-            The Inner Planets (Terrestrial Planets)
-        </h2>
-        <p>
-            The Inner Planets (Terrestrial Planets)
-        </p>
-        <p>
-            <ul>
-                <li>
-                    Mercury: The closest and smallest planet. It has no atmosphere to trap heat, resulting in extreme temperature swings from 430°C during the day to -180°C at night. It takes about 88 Earth days to complete one orbit.
-                </li><br>
-                <li>
-                    Venus: The second planet from the Sun and the hottest. It is shrouded in a thick, toxic atmosphere of carbon dioxide and sulfuric acid that creates a runaway greenhouse effect.
-                </li><br>
-                <li>
-                    Earth: Our home planet, and the only known world to harbor life. It has a unique blend of liquid water, a nitrogen-oxygen atmosphere, and dynamic geological activity.
-                </li><br>
-                <li>
-                    Mars: Known as the "Red Planet" due to iron oxide (rust) covering its surface. It is cold and dusty, but features the largest volcano in the solar system, Olympus Mons.
-                </li><br>
-            </ul>
-        </p>
-        <h2>
-            The Outer Planets (Giant Planets)
-        </h2>
-        <p>
-            These planets are significantly larger and are composed mostly of hydrogen, helium, and heavier fluids like water, ammonia, and methane.
-        </p>
-        <p>
-            <ul>
-                <li>
-                    Jupiter: The largest planet in the solar system. It is a gas giant famous for the Great Red Spot, a massive, centuries-old storm larger than Earth, and a retinue of dozens of moons.
-                </li><br>
-                <li>
-                    Saturn: The second-largest planet. It is highly recognizable by its spectacular rings, which are made of billions of particles of ice and rocky debris.
-                </li><br>
-                <li>
-                    Uranus: An ice giant with an atmosphere rich in methane, which gives it a distinct blue-green color. Uniquely, it spins on its side, likely due to a massive ancient collision.
-                </li><br>
-                <li>
-                    Neptune: The farthest planet from the Sun. It is also an ice giant and is known for its incredibly fast, raging winds and dynamic storm systems.
-                </li><br>
-            </ul>
-        </p>
-        <h2>
-            Dwarf Planets
-        </h2>
-        <p>
-            Beyond Neptune lies the Kuiper Belt, home to smaller, icy worlds that do not meet the International Astronomical Union's (IAU) strict definition of a planet (specifically, they haven't "cleared their neighboring region of other objects"). The five officially recognized dwarf planets are Pluto, Ceres, Haumea, Makemake, and Eris.
-        </p>
-        <img src="nasa-hubble-space-telescope-rZhFmSl1Jow-unsplash.jpg" alt="the planets"
-        width="550px"
-        height="450px"><br><br>
-        <a href="https://www.google.com/search?q=everything+you+need+to+know+about+the+planets&sca_esv=c9ce5070ea22d1f0&biw=1280&bih=593&sxsrf=APpeQnvYFLdAGk5RaRfniFErjywmeTiU8w%3A1784017453458&ei=LfJVavnFG9KwhbIPlMSJ2Aw&ved=0ahUKEwi5kNj03tGVAxVSWEEAHRRiAssQ4dUDCBA&uact=5&oq=everything+you+need+to+know+about+the+planets&gs_lp=Egxnd3Mtd2l6LXNlcnAiLWV2ZXJ5dGhpbmcgeW91IG5lZWQgdG8ga25vdyBhYm91dCB0aGUgcGxhbmV0czIKEAAYRxjWBBiwAzIKEAAYRxjWBBiwAzIKEAAYRxjWBBiwAzIKEAAYRxjWBBiwAzIKEAAYRxjWBBiwAzIKEAAYRxjWBBiwAzIKEAAYRxjWBBiwAzIKEAAYRxjWBBiwAzIOEAAY5AIY1gQYsAPYAQEyDhAAGOQCGNYEGLAD2AEBMg4QABjkAhjWBBiwA9gBATIXEC4Y3AYYuAYY2gYY2AIYyAMYsAPYAQEyFxAuGNwGGLgGGNoGGNgCGMgDGLAD2AEBMhcQLhjcBhi4BhjaBhjYAhjIAxiwA9gBATIXEC4Y3AYYuAYY2gYY2AIYyAMYsAPYAQFIsg9QyAdYyAdwAXgBkAEAmAEAoAEAqgEAuAEDyAEA-AEBmAIBoAIxmAMAiAYBkAYPugYGCAEQARgJkgcBMaAHALIHALgHAMIHAzQtMcgHJ4AIAQ&sclient=gws-wiz-serp"
-        target="_blank">click to learn more</a>
-    </div>
-    <div class="footer">
+
         <hr>
-         <p>
+
+        <h1>Welcome to Explore the Universe</h1>
+
+        <p>
+            Discover galaxies, stars, planets, black holes, and the mysteries
+            of the cosmos. Journey through space and time and learn how the
+            universe works.
+        </p>
+
+        <a
+            class="learn-more"
+            href="https://www.google.com/search?q=about+the+universe"
+            target="_blank"
+        >
+            Learn More
+        </a>
+
+
+        <!-- NAVIGATION -->
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="Galaxies.html">Galaxies</a>
+
+            <a href="Sun.html">Sun</a>
+
+            <a href="Stars.html">Stars</a>
+
+            <a href="Planets.html">Planets</a>
+            <a href="contact.html">Contact Us</a>
+
+        </nav>
+
+        <br>
+
+        <hr>
+
+    </div>
+
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+
+        <h2>The Planets</h2>
+
+        <p>
+            Our solar system consists of eight planets orbiting the Sun,
+            categorized into two main groups based on their composition.
+            The four inner terrestrial planets are made of rock and metal,
+            while the four outer giant planets are massive spheres primarily
+            made of gas or ice.
+        </p>
+
+
+        <h2>The Inner Planets (Terrestrial Planets)</h2>
+
+        <p>
+            The inner planets are the four planets closest to the Sun.
+            They are relatively small and have solid, rocky surfaces.
+        </p>
+
+        <ul>
+
+            <li>
+                <strong>Mercury:</strong>
+                The closest and smallest planet. It has almost no atmosphere
+                to trap heat, resulting in extreme temperature changes. It
+                takes about 88 Earth days to complete one orbit around the Sun.
+            </li>
+
+            <li>
+                <strong>Venus:</strong>
+                The second planet from the Sun and the hottest planet in the
+                solar system. It is covered by a thick atmosphere dominated
+                by carbon dioxide, creating an intense greenhouse effect.
+            </li>
+
+            <li>
+                <strong>Earth:</strong>
+                Our home planet and the only world currently known to harbor
+                life. Earth has liquid water, a nitrogen-oxygen atmosphere,
+                and active geological processes.
+            </li>
+
+            <li>
+                <strong>Mars:</strong>
+                Known as the "Red Planet" because of iron oxide, or rust,
+                covering its surface. Mars is cold and dusty and contains
+                Olympus Mons, the largest known volcano in the solar system.
+            </li>
+
+        </ul>
+
+
+        <h2>The Outer Planets (Giant Planets)</h2>
+
+        <p>
+            The outer planets are significantly larger than the inner planets.
+            They include two gas giants and two ice giants.
+        </p>
+
+        <ul>
+
+            <li>
+                <strong>Jupiter:</strong>
+                The largest planet in the solar system. It is a gas giant
+                famous for the Great Red Spot, a massive storm, and its many
+                moons.
+            </li>
+
+            <li>
+                <strong>Saturn:</strong>
+                The second-largest planet. It is famous for its spectacular
+                rings, which are made primarily of ice and rocky material.
+            </li>
+
+            <li>
+                <strong>Uranus:</strong>
+                An ice giant with an atmosphere containing methane, which
+                gives it a blue-green appearance. Uranus rotates at a dramatic
+                tilt, making it appear to spin on its side.
+            </li>
+
+            <li>
+                <strong>Neptune:</strong>
+                The farthest recognized planet from the Sun. It is an ice
+                giant known for extremely powerful winds and dynamic storms.
+            </li>
+
+        </ul>
+
+
+        <h2>Dwarf Planets</h2>
+
+        <p>
+            Beyond Neptune lies the Kuiper Belt, home to many smaller icy
+            worlds. These objects do not meet all the requirements for being
+            classified as full planets. The five officially recognized dwarf
+            planets are Pluto, Ceres, Haumea, Makemake, and Eris.
+        </p>
+
+
+        <!-- PLANETS IMAGE -->
+        <img
+            src="nasa-hubble-space-telescope-rZhFmSl1Jow-unsplash.jpg"
+            alt="The planets in space"
+            class="planets-image"
+        >
+
+
+        <br>
+
+        <!-- LEARN MORE BUTTON -->
+        <a
+            class="main-button"
+            href="https://www.google.com/search?q=everything+you+need+to+know+about+the+planets"
+            target="_blank"
+        >
+            Click to Learn More
+        </a>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <div class="footer">
+
+        <hr>
+
+        <p>
             Designed by Nwankwo Chiziterem
         </p>
+
         <p>
-            Phone Number : 09072558658
+            Phone Number: 09072558658
         </p>
-        <P>
-            E-mail address : nwankwochiziterem2012@gmail.com
-        </P>
+
+        <p>
+            E-mail Address: nwankwochiziterem2012@gmail.com
+        </p>
+
         <hr>
+
     </div>
+
 </body>
-</html>
+
+</html>c:\Users\HP\Desktop\The Universe;shockacola\contact.html
